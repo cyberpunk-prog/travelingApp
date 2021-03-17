@@ -40,48 +40,126 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-          child: ListView(
-        padding: EdgeInsets.symmetric(vertical: 30.0),
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(left: 20.0, right: 80.0),
-            child: Text(
-              'Locations',
-              style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+        child: ListView(
+          padding: EdgeInsets.symmetric(vertical: 30.0),
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, right: 80.0),
+              child: Text(
+                'Locations',
+                style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+              ),
             ),
-          ),
-          SizedBox(height: 20.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SizedBox(width: 20.0),
-              _buildOption(0),
-              SizedBox(width: 20.0),
-              _buildOption(1),
-              SizedBox(width: 20.0),
-              _buildOption(2),
-              //SizedBox(width: 120.0),
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-            child: Container(
-              height: 1,
-              color: Colors.grey,
+            SizedBox(height: 20.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(width: 20.0),
+                _buildOption(0),
+                SizedBox(width: 20.0),
+                _buildOption(1),
+                SizedBox(width: 20.0),
+                _buildOption(2),
+                //SizedBox(width: 120.0),
+              ],
             ),
-          ),
-          SizedBox(height: 20.0),
-          Container(
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+              child: Container(
+                height: 1,
+                color: Colors.black26,
+              ),
+            ),
+            SizedBox(height: 20.0),
+            Container(
               color: Colors.blue,
               height: 800,
               child: ListView.builder(
                 itemCount: destinations.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return Text(destinations[index].name);
+                  return Container(
+                      height: 200,
+                      color: Colors.grey,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            height: 120.0,
+                            width: 380.0,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('lib/assets/images/1.jpg'),
+                                fit: BoxFit.fill,
+                              ),
+                              shape: BoxShape.rectangle,
+                            ),
+                          ),
+                          Container(
+                            height: 70,
+                            width: 380,
+                            color: Colors.white,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 20.0, right: 230.0, bottom: 8),
+                                      child: Text(
+                                        destinations[index].name,
+                                        style: TextStyle(
+                                            fontSize: 20.0,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                        width: 300,
+                                        child: Text(
+                                          destinations[index].description,
+                                          style: TextStyle(
+                                              fontSize: 10.0,
+                                              fontWeight: FontWeight.w300),
+                                        )),
+                                  ],
+                                ),
+                                OutlineButton(
+                                  onPressed: () {},
+                                  child: SizedBox(
+                                    height: 33,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Text(
+                                          destinations[index].date,
+                                          style: TextStyle(
+                                              fontSize: 15.0,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Text(
+                                          destinations[index].month,
+                                          style: TextStyle(
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ));
                 },
-              ))
-        ],
-      )),
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
