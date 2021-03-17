@@ -122,21 +122,20 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: 380,
                           color: Colors.white,
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Column(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        top: 0, bottom: 8),
+                                  SizedBox(
+                                    width: 280,
                                     child: Text(
                                       destinations[index].name,
-                                      textAlign: TextAlign.left,
                                       style: TextStyle(
                                           fontSize: 20.0,
                                           fontWeight: FontWeight.bold),
+                                      textAlign: TextAlign.left,
                                     ),
                                   ),
                                   SizedBox(
