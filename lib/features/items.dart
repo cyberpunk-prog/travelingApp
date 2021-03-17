@@ -16,33 +16,28 @@ class Destination {
 
 List<Destination> destinations = [
   Destination(
-      imageUrl: 'assets/images/venice.jpg',
-      name: 'Venice',
-      description: 'Visit Venice for an amazing and unforgettable adventure.',
+      name: 'Ocean at Algarve',
+      description: 'Enjoy view over sky blue ocean from your room',
       date: '18',
       month: 'Aug'),
   Destination(
-      imageUrl: 'assets/images/venice.jpg',
-      name: 'Venice',
-      description: 'Visit Venice for an amazing and unforgettable adventure.',
+      name: 'Antelope Canyon',
+      description: 'Must have on a bucket ist because it\'s awesome',
       date: '18',
       month: 'Aug'),
   Destination(
-      imageUrl: 'assets/images/venice.jpg',
       name: 'Venice',
       description: 'Visit Venice for an amazing and unforgettable adventure.',
-      date: '18',
+      date: '23',
       month: 'Aug'),
   Destination(
-      imageUrl: 'assets/images/venice.jpg',
       name: 'Venice',
       description: 'Visit Venice for an amazing and unforgettable adventure.',
-      date: '18',
-      month: 'Aug'),
+      date: '08',
+      month: 'Jul'),
   Destination(
-      imageUrl: 'assets/images/venice.jpg',
-      name: 'Venice',
-      description: 'Visit Venice for an amazing and unforgettable adventure.',
-      date: '18',
-      month: 'Aug'),
+      name: 'Ocean View',
+      description: 'Visit unforgettable adventure.',
+      date: '23',
+      month: 'Oct'),
 ];
