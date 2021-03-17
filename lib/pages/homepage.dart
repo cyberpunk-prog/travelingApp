@@ -87,34 +87,40 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Stack(children: <Widget>[
-                          Center(
-                            child: Container(
-                              height: 180.0,
-                              width: 380.0,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                      'lib/assets/images/$index.jpg'),
-                                  fit: BoxFit.fill,
+                        Stack(
+                          children: <Widget>[
+                            Center(
+                              child: Container(
+                                height: 180.0,
+                                width: 400.0,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        'lib/assets/images/$index.jpg'),
+                                    fit: BoxFit.fill,
+                                  ),
+                                  borderRadius: BorderRadius.circular(10.0),
                                 ),
-                                borderRadius: BorderRadius.circular(10.0),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 700),
-                            child: Checkbox(
-                                //activeColor: Colors.red,
-                                hoverColor: Colors.white,
-                                value: checkbox,
-                                onChanged: (value) {
-                                  setState(() {
-                                    checkbox = true;
-                                  });
-                                }),
-                          ),
-                        ]),
+                            Container(
+                              width: 380,
+                              child: Align(
+                                alignment: Alignment.topRight,
+                                child: Checkbox(
+                                    splashRadius: 10.0,
+                                    activeColor: Colors.red,
+                                    hoverColor: Colors.white,
+                                    value: checkbox,
+                                    onChanged: (value) {
+                                      setState(() {
+                                        checkbox = true;
+                                      });
+                                    }),
+                              ),
+                            ),
+                          ],
+                        ),
                         //Each card image file
                         //Description of the card location
                         Container(
