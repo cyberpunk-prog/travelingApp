@@ -153,7 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               OutlineButton(
                                 onPressed: () {},
                                 child: SizedBox(
-                                  height: 33,
+                                  height: 43,
                                   child: Column(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
